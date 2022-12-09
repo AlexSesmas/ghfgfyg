@@ -1,0 +1,146 @@
+import java.util.Scanner;    
+public static void main(String[] args) {
+        int op;
+        Scanner leer=new Scanner(System.in);
+        System.out.println("Menu, cual programa deseas hacer?");
+        System.out.println("1) Operacion 4 leer.nextInt();    System.out.println("2)Volumen 2 esferas");
+        System.out.println("3)Volumen cono");
+        System.out.println("4) Primos entre dos numeros");
+        System.out.println("5) Multiplos 11 y 17  en dos numeros");
+        System.out.println("6) Tablas de multiplicar 1 al 20");
+        System.out.println("7) Factorial de un numero");
+        System.out.println("8) Venta de autos");
+        op=leer.nextInt();
+        switch (op) {
+            case 1:
+                int a, b, c ,d, t;
+                Scanner leer=new Scanner(System.in);
+                System.out.println("1) Operacion leer.nextInt();    
+                System.out.println("dame valor 1");        
+                a=leer.nextInt();
+                System.out.println("dame valor 2");
+                b=leer.nextInt();
+                System.out.println("dame valor 3");
+                c=leer.nextInt();
+                System.out.println("dame valor 1");
+                d=leer.nextInt();
+                t=(Math.pow(a,c)-(7/4*b))/(d+5*(a/b));
+                System.out.println("El resultado es: "+ t);
+                break;
+            case 2:
+                double r1=0, r2=0, v1, v2, pi=3.14;
+                Scanner leer=new Scanner(System.in);
+                System.out.println("2) Volumen esferas");
+                System.out.println("dame el radio de la primer esfera");
+                r1=leer.nextInt();
+                System.out.println("dame el radio de la segunda esfera");
+                r2=leer.nextInt();
+                v1=((4/3)*pi)*((r1)*(r1)*(r1));
+                v2=((4/3)*pi)*((r2)*(r2)*(r2));
+                System.out.println("El resultado primer esfera es: "+ v1);
+                System.out.println("El resultado primer esfera es: "+ v2);
+                break;
+            case 3:
+                int rad, alt, vol, pi=3.14;
+                Scanner leer=new Scanner(System.in);
+                System.out.println("3) Volumen cono");
+                System.out.println("dame radio");
+                rad=leer.nextInt();
+                System.out.println("dame altura");
+                alt=leer.nextInt()
+                vol=(pi*(rad*rad)*alt)/3;
+                System.out.println("El volumen del cono es: "+ vol);
+                break;
+            case 4:
+                int p1, p2, prim = 0;
+                Scanner sc = new Scanner(System.in);
+                System.out.println("4) Primos entre dos numeros.");
+                System.out.println("Escribe el comienzo:");
+                p1 = sc.nextInt();
+                System.out.println("Escribe el p2:");
+                p2 = sc.nextInt();
+                for (int x = 2; x < numero / 2; x++) {
+                // Si es divisible por estos números, no es primo
+                if (numero % x == 0)
+                    return false;
+            }
+            
+        }
+                System.out.printf("\nTotal: %d", prim);
+                sc.close();
+                break;
+
+            case 5:
+                int m1, m2, x=0;
+                System.out.println("5) Multiplos 11 y 17 en un rango");
+                m1=leer.nextInt();
+                m2=leer.nextInt();
+                do {
+                    for (x = m1; x < m2; x++) {
+                        if(x/11==0){
+                        System.out.print("| "+x);
+                        }
+                        
+                    }
+                    x++;
+                    } while (m1>=20);
+                break;
+            case 6:
+                System.out.println("6) Tablas de multiplicar 1 al 20");
+                int tabla[][]=new int[20][20];
+                int fila=1,columna=1;
+                int i=0; 
+                while(i<tabla.length){
+                    int j=0; 
+                    while(j<tabla[i].length){
+                        tabla[i][j]=fila*columna;
+                        columna=columna+1;
+                        j++;
+                        }
+                    fila=fila+1;
+                    columna=1;
+                    i++;
+                    }
+                i=0;
+                while(i<tabla.length){
+                    int j=0;
+                    while( j<tabla[i].length){
+                        System.out.print(" "+tabla[i][j]+"| ");
+                        j++;
+                        }
+                    System.out.print("\n");
+                    i++;
+                    }
+                break;
+            case 7:
+                int numf;
+                    System.out.println("7) Factorial de un numero");
+                    numf=leer.nextInt();
+                    while(i <= fact){
+                    numerofact = numerofact*i;
+                    i++;
+                    }
+                    System.out.println(factorial(numf));
+                    break;
+            case 8:
+                int au=0, autos=0, aa1=0,valor2=0,valort=0, s;
+                Scanner leera=new Scanner(System.in);
+                System.out.println("8) Venta de autos, cuantos autos vendio?");
+                autos=leera.nextInt();
+                for ( au=0; au<autos; au++) {
+                    do {
+                        System.out.println("Valor del auto"+(au+1));
+                        valor2=leera.nextInt();
+                    } while (valor2<=5000||valor2>=100000);
+                    valort+=valor2;
+                }
+                aa1=autos+370;
+                s=(valort*.04)+aa1+8000;
+                System.out.println("El s del vendedor fue:"+s);
+                break;
+            default:
+                break;
+        }
+    } 
+
+}
